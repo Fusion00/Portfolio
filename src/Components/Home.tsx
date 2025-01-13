@@ -14,7 +14,7 @@ const Home = () => {
   
           <div className="flex justify-center items-center flex-wrap w-72">
             <div className="text-white flex gap-4 text-3xl">
-             <img src="/Hand.png" alt="hi" className="h-8 w-8"/>
+             <img src="Hand.png" alt="hi" className="h-8 w-8"/>
               Hi I'm Dhruv
             </div>
             <div className="text-white mt-10 sm:-mt-20">
