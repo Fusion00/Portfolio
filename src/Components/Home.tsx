@@ -26,9 +26,18 @@ const Home = () => {
           </div>
           <div className="text-base sm:text-xl py-4 flex flex-wrap justify-center items-center gap-6 xl:gap-0  w-full xl:w-96">
             <button 
-            className="border-4 border-[#00BEB9] text-[#00BEB9] hover:text-teal-200 rounded-full w-48 sm:w-72 h-12 sm:h-16"
-            
-            >Download CV</button>
+                className="border-4 border-[#00BEB9] text-[#00BEB9] hover:text-teal-200 rounded-full w-48 sm:w-72 h-12 sm:h-16"
+                
+                >
+                <a
+                href="https://storage.cloud.google.com/fetcher_01/Others/Resume1.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                
+              >
+                Download CV
+              </a>
+            </button>
             <button className="bg-[#00BEB9] rounded-full w-48 sm:w-72 h-12 sm:h-16 hover:bg-teal-600 ">Lets Connect</button>
           </div>
         </div>
