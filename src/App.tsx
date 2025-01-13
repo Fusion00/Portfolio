@@ -10,7 +10,7 @@ function App() {
     <BrowserRouter basename='Portfolio'>
       <Routes>
       <Route path="/" element={<PublicLayout><Home/></PublicLayout>} />
-      <Route path="/projects" element={<PublicLayout><Projects/></PublicLayout>} />
+      <Route path="/Projects" element={<PublicLayout><Projects/></PublicLayout>} />
       
       <Route path="/Connect" element={<PublicLayout><Connect/></PublicLayout>} />
       </Routes>
