@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Home: React.FC = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top-left corner
+  }, []);
+
   const navigate = useNavigate()
     return (
       <div>

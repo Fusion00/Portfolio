@@ -10,7 +10,8 @@ const Navbar: React.FC  = () => {
         onClick={() => navigate("/Projects")}>Projects</div>
           <div className="text-5xl absolute top-5 hover:cursor-pointer"
           onClick={() => navigate("/")}>D</div>
-          <div className="hover:underline hover:underline-offset-[20px] hover:cursor-pointer">Techs</div>
+          <div className="hover:underline hover:underline-offset-[20px] hover:cursor-pointer"
+          onClick={() => navigate("/Techs")}>Techs</div>
         </div>
       </div>
     ) 

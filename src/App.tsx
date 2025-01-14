@@ -3,6 +3,7 @@ import Home from './Components/Home'
 import PublicLayout from './AppBar/Publiclayout'
 import Projects from './Components/Projects'
 import Connect from './Components/Connect'
+import Tech from './Components/Tech'
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
       <Route path="/Projects" element={<PublicLayout><Projects/></PublicLayout>} />
       
       <Route path="/Connect" element={<PublicLayout><Connect/></PublicLayout>} />
+      <Route path="/Techs" element={<PublicLayout><Tech/></PublicLayout>} />
       </Routes>
     </BrowserRouter>
   )

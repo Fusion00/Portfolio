@@ -1,4 +1,11 @@
+import { useEffect } from "react";
+
 const Connect = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top-left corner
+  }, []);
+
   return (
     <div className="flex flex-wrap bg-gradient-to-b from-[#001a1a] from-10% via-[#032125] via-50% to-[#0c3b45] to-90%  justify-center py-32 gap-20 lg:gap-52 font-rounded">
       
