@@ -12,7 +12,7 @@ const Projects = () => {
               className="h-28n w-28"/>
 
               <p 
-              className="text-blue-300 text-xs font-serif hover:cursor-pointer"
+              className="text-blue-300 text-base w-32 flex justify-center font-serif hover:cursor-pointer"
               ><a>Wishlist_Luxuary_Escape</a></p>
 
               <i className="ri-star-fill text-yellow-500"></i>
@@ -31,7 +31,7 @@ const Projects = () => {
               className="h-28n w-28"/>
 
               <p 
-              className="text-blue-300 text-xs font-serif "
+              className="text-blue-300 text-base w-32 flex justify-center font-serif hover:cursor-pointer "
               ><a 
               href="https://fusion00.github.io/Cosmic_Prophecies/"
               target="_blank"
