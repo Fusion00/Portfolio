@@ -1,8 +1,12 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { db } from "../config/firebase"; // Import your Firebase config
 import { collection, addDoc } from "firebase/firestore";
 
 const Connect = () => {
+
+    useEffect(() => {
+      window.scrollTo(0, 0); // Scroll to the top-left corner
+    }, []);
 
   const [Name, setName] = useState("");
   const [Contact, setContact] = useState("");

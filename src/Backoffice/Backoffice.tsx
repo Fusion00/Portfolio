@@ -11,6 +11,11 @@ interface Request {
 }
 
 const Backoffice = () => {
+
+    useEffect(() => {
+      window.scrollTo(0, 0); // Scroll to the top-left corner
+    }, []);
+    
   const [ReqList, setReqList] = useState<Request[]>([]);
 
   // Reference to the "Requests" collection in Firestore
