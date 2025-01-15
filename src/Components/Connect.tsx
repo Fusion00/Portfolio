@@ -1,10 +1,38 @@
-import { useEffect } from "react";
+import { useState } from "react";
+import { db } from "../config/firebase"; // Import your Firebase config
+import { collection, addDoc } from "firebase/firestore";
 
 const Connect = () => {
 
-  useEffect(() => {
-    window.scrollTo(0, 0); // Scroll to the top-left corner
-  }, []);
+  const [Name, setName] = useState("");
+  const [Contact, setContact] = useState("");
+  const [Text, setText] = useState("");
+
+// Reference to the Firestore collection
+const RequestCollectionRef = collection(db, "Requests");
+
+// Handle form submission
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault(); // Prevent form from refreshing the page
+
+  try {
+    // Add data to Firestore
+    await addDoc(RequestCollectionRef, {
+      Name,
+      Contact,
+      Text,
+    });
+
+    // Reset form fields after submission
+    setName("");
+    setContact("");
+    setText("");
+
+    
+  } catch (err) {
+    alert("An error occurred. Please try again.");
+  }
+};
 
   return (
     <div className="flex flex-wrap bg-gradient-to-b from-[#001a1a] from-10% via-[#032125] via-50% to-[#0c3b45] to-90%  justify-center py-32 gap-20 lg:gap-52 font-rounded">
@@ -50,18 +78,32 @@ const Connect = () => {
 
         <div >
             <form
-            className="flex flex-wrap justify-center w-72 py-3 gap-6">
+            className="flex flex-wrap justify-center w-72 py-3 gap-6" 
+            onSubmit={handleSubmit}
+            >
             <input 
             className="h-11 w-full rounded-full text-gray-700 font-sans pl-3"
-            placeholder="Name"/>
+            placeholder="Name"
+            type="text"
+            value={Name}
+            onChange={(e)=> setName(e.target.value)}
+            />
 
             <input 
             className="h-11 w-full rounded-full text-gray-700 font-sans pl-3"
-            placeholder="Contact"/>
+            placeholder="Contact"
+            type="text"
+            value={Contact}
+            onChange={(e)=> setContact(e.target.value)}
+            />
 
             <textarea 
             className="h-44 w-full rounded-lg text-gray-700 font-sans pl-3 pt-2"
-            placeholder="Text"/>
+            placeholder="Text"
+            typeof="text"
+            value={Text}
+            onChange={(e)=> setText(e.target.value)}
+            />
 
             <button className="bg-[#00BEB9] rounded-full w-48  h-12  hover:bg-teal-600 ">
                 Submit
