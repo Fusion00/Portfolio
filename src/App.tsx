@@ -9,7 +9,7 @@ import Backoffice from './Backoffice/Backoffice'
 function App() {
 
   return (
-    <BrowserRouter basename='Portfolio'>
+    <BrowserRouter>
       <Routes>
       <Route path="/" element={<PublicLayout><Home/></PublicLayout>} />
       <Route path="/Projects" element={<PublicLayout><Projects/></PublicLayout>} />
