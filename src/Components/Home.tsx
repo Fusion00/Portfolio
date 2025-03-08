@@ -41,7 +41,7 @@ const Home: React.FC = () => {
                 
                 >
                 <a
-                href="https://storage.cloud.google.com/fetcher_01/Others/Resume1.pdf"
+                href="https://storage.googleapis.com/fetcher_01/Others/Dhruv%20(2).pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 
